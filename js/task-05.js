@@ -9,7 +9,7 @@ input.addEventListener('input', onInputchange);
 
 function onInputchange(event) {
 
-  event.currentTarget.value === '' ? (output.textContent = 'Незнакомец') : (output.textContent = event.currentTarget.value);
+  output.textContent = event.currentTarget.value === '' ? 'Незнакомец' : event.currentTarget.value;
   
 }
 

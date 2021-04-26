@@ -12,10 +12,11 @@
 
 const navEl = document.querySelectorAll('li.item');
 console.log(`В списке ${navEl.length} категории.`);
-const newnavEl = [...navEl].map((el) => {
+navEl.forEach((el) => {
   console.log(`Категория: ${el.firstElementChild.textContent}`);
   console.log(`Количество элементов: ${el.lastElementChild.childElementCount}`);
 });
+
 
 
 

@@ -4,22 +4,22 @@
 // Для добавления стилей, используй CSS-классы valid и invalid.
 
 
-const input = document.getElementById("validation-input")
+const input = document.getElementById("validation-input");
 input.classList.add("validation-input");
+const length = input.getAttribute('data-length');
+console.log(length);
 
 input.addEventListener('blur', validInputLength);
 function validInputLength(e) {
-  if (e.currentTarget.value.length === 6) {
+  if (e.currentTarget.value.length == length) {
     e.currentTarget.classList.add('valid');
     e.currentTarget.classList.remove('invalid');
   }
-  if (e.currentTarget.value.length !== 6) {
+  else {
     e.currentTarget.classList.add('invalid');
     e.currentTarget.classList.remove('valid');
   }
-   if (e.currentTarget.value.length === 0) {
-    e.currentTarget.classList.remove('invalid');
-    e.currentTarget.classList.remove('valid');
-  }
 }
+
+
 

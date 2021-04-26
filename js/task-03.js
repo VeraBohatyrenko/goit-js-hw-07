@@ -32,7 +32,7 @@ const itemEl = images.map((image) => {
   console.log(listItem);
   return listItem
 });
-listEl.insertAdjacentHTML('beforeend', itemEl)
+listEl.insertAdjacentHTML('beforeend', itemEl.join(''))
 
 listEl.classList.add('list')
 

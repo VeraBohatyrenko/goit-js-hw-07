@@ -8,7 +8,7 @@ const decrementBtn = document.querySelector('[data-action="decrement"]')
 const incrementBtn = document.querySelector('[data-action="increment"]')
 const counterValue = document.querySelector('#value')
 
-let value = 2;
+let value = 0;
 
 const fn = () => (counterValue.textContent = value)
 const increment = () => {
